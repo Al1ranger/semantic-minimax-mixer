@@ -1,0 +1,17 @@
+{
+  "criterion": "The hypothetical alarm sounds.",
+  "rows": [
+    "Select red.",
+    "Select blue."
+  ],
+  "columns": [
+    "Environment presents red.",
+    "Environment presents blue."
+  ],
+  "outcomes": [
+    "The alarm sounds.",
+    "The alarm remains silent.",
+    "The alarm remains silent.",
+    "The alarm sounds."
+  ]
+}
