@@ -1,0 +1,313 @@
+{
+  "network": "StudioNet",
+  "source_commit": "1297f93f37192b5441fd7517e33f019f7a7619d5",
+  "transactions": [
+    {
+      "step": "deploy",
+      "args": [
+        "deploy",
+        "--contract",
+        "contracts/SemanticMinimaxMixer.py"
+      ],
+      "nonce": "0x1cf",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "hash": "0xd7aa3ee169696d9c193134604e285bd0810d2e24a9e8626fd3269820d0dbd8ed",
+      "receipt": {
+        "hash": "0xd7aa3ee169696d9c193134604e285bd0810d2e24a9e8626fd3269820d0dbd8ed",
+        "address": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "balanced",
+      "args": [
+        "write",
+        "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "analyze",
+        "--args",
+        "balanced",
+        "Al1ranger/semantic-minimax-mixer/1297f93f37192b5441fd7517e33f019f7a7619d5/examples/balanced.json",
+        "ea56c1fae74a8cd838274ce76e3c27331594f923a50e385b415f757a82def0f6"
+      ],
+      "nonce": "0x1d0",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "hash": "0xc86d82c15f9b9e7a96afcdc12f01aee634d2d9b65c8443be0d45764f81bebe48",
+      "receipt": {
+        "hash": "0xc86d82c15f9b9e7a96afcdc12f01aee634d2d9b65c8443be0d45764f81bebe48",
+        "address": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "uncertain",
+      "args": [
+        "write",
+        "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "analyze",
+        "--args",
+        "uncertain",
+        "Al1ranger/semantic-minimax-mixer/1297f93f37192b5441fd7517e33f019f7a7619d5/examples/uncertain.json",
+        "7380efdba0029e1a4e7db23acfeef1abf683803e256bf1e4f713b9d57f79026e"
+      ],
+      "nonce": "0x1d1",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "hash": "0xcb66b8775516b48fbb9e29e2076e5b8e2fc0c72ce1ae533501181da7b74e5c33",
+      "receipt": {
+        "hash": "0xcb66b8775516b48fbb9e29e2076e5b8e2fc0c72ce1ae533501181da7b74e5c33",
+        "address": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "replay",
+      "args": [
+        "write",
+        "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "analyze",
+        "--args",
+        "balanced",
+        "Al1ranger/semantic-minimax-mixer/1297f93f37192b5441fd7517e33f019f7a7619d5/examples/balanced.json",
+        "ea56c1fae74a8cd838274ce76e3c27331594f923a50e385b415f757a82def0f6"
+      ],
+      "nonce": "0x1d2",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "message": "Report already published",
+      "hash": "0xba04e2eabc0134a06f1e49fff06953b93271854a72a6c424566657cecad3bd03",
+      "receipt": {
+        "hash": "0xba04e2eabc0134a06f1e49fff06953b93271854a72a6c424566657cecad3bd03",
+        "address": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "status": "FINALIZED",
+        "execution": "ERROR",
+        "consensus": "MAJORITY_AGREE",
+        "expected_error_matched": true,
+        "committed": false,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    }
+  ],
+  "cases": {
+    "balanced": {
+      "body": "{\n  \"criterion\": \"The hypothetical alarm sounds.\",\n  \"rows\": [\n    \"Select red.\",\n    \"Select blue.\"\n  ],\n  \"columns\": [\n    \"Environment presents red.\",\n    \"Environment presents blue.\"\n  ],\n  \"outcomes\": [\n    \"The alarm sounds.\",\n    \"The alarm remains silent.\",\n    \"The alarm remains silent.\",\n    \"The alarm sounds.\"\n  ]\n}\n",
+      "labels": [
+        "PASS",
+        "FAIL",
+        "FAIL",
+        "PASS"
+      ],
+      "lower": {
+        "column_against_rows": [
+          1,
+          1
+        ],
+        "column_mix": [
+          1,
+          1
+        ],
+        "denominator": 2,
+        "matrix": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "row_against_columns": [
+          1,
+          1
+        ],
+        "row_mix": [
+          1,
+          1
+        ],
+        "value_numerator": 1
+      },
+      "root": "1193b69d6eabac8739a49be910934b785d8ae5d05f7f219c5b0f582748cf7e6d",
+      "scenario": {
+        "columns": [
+          "Environment presents red.",
+          "Environment presents blue."
+        ],
+        "criterion": "The hypothetical alarm sounds.",
+        "outcomes": [
+          "The alarm sounds.",
+          "The alarm remains silent.",
+          "The alarm remains silent.",
+          "The alarm sounds."
+        ],
+        "rows": [
+          "Select red.",
+          "Select blue."
+        ]
+      },
+      "spec": {
+        "author": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "contract": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "id": "9df9c9fbba5ff582c9ae6dfc5db20f2529c428b7eff9ebd056b52be71bfb44d1",
+        "nonce": "balanced",
+        "policy": "semantic-minimax-mixer-v1",
+        "sha256": "ea56c1fae74a8cd838274ce76e3c27331594f923a50e385b415f757a82def0f6",
+        "url": "https://raw.githubusercontent.com/Al1ranger/semantic-minimax-mixer/1297f93f37192b5441fd7517e33f019f7a7619d5/examples/balanced.json"
+      },
+      "status": "GUARANTEED",
+      "target_numerator": 1,
+      "upper": {
+        "column_against_rows": [
+          1,
+          1
+        ],
+        "column_mix": [
+          1,
+          1
+        ],
+        "denominator": 2,
+        "matrix": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "row_against_columns": [
+          1,
+          1
+        ],
+        "row_mix": [
+          1,
+          1
+        ],
+        "value_numerator": 1
+      }
+    },
+    "uncertain": {
+      "body": "{\n  \"criterion\": \"The hypothetical alarm sounds.\",\n  \"rows\": [\n    \"Select red.\",\n    \"Select blue.\"\n  ],\n  \"columns\": [\n    \"Environment presents red.\",\n    \"Environment presents blue.\"\n  ],\n  \"outcomes\": [\n    \"The alarm sounds.\",\n    \"The alarm remains silent.\",\n    \"The alarm remains silent.\",\n    \"The outcome does not specify whether the alarm sounds.\"\n  ]\n}\n",
+      "labels": [
+        "PASS",
+        "FAIL",
+        "FAIL",
+        "UNKNOWN"
+      ],
+      "lower": {
+        "column_against_rows": [
+          0,
+          0
+        ],
+        "column_mix": [
+          0,
+          2
+        ],
+        "denominator": 2,
+        "matrix": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "row_against_columns": [
+          0,
+          0
+        ],
+        "row_mix": [
+          0,
+          2
+        ],
+        "value_numerator": 0
+      },
+      "root": "1a3c73d5e9b250b1d5281d51a4922be1d44770bd3a2484f67a147cd4960699c1",
+      "scenario": {
+        "columns": [
+          "Environment presents red.",
+          "Environment presents blue."
+        ],
+        "criterion": "The hypothetical alarm sounds.",
+        "outcomes": [
+          "The alarm sounds.",
+          "The alarm remains silent.",
+          "The alarm remains silent.",
+          "The outcome does not specify whether the alarm sounds."
+        ],
+        "rows": [
+          "Select red.",
+          "Select blue."
+        ]
+      },
+      "spec": {
+        "author": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "contract": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+        "id": "029998c25b447b22e047c7442024b887a6619b5f3302cd9f16ac32b822d27c93",
+        "nonce": "uncertain",
+        "policy": "semantic-minimax-mixer-v1",
+        "sha256": "7380efdba0029e1a4e7db23acfeef1abf683803e256bf1e4f713b9d57f79026e",
+        "url": "https://raw.githubusercontent.com/Al1ranger/semantic-minimax-mixer/1297f93f37192b5441fd7517e33f019f7a7619d5/examples/uncertain.json"
+      },
+      "status": "UNRESOLVED",
+      "target_numerator": 1,
+      "upper": {
+        "column_against_rows": [
+          1,
+          1
+        ],
+        "column_mix": [
+          1,
+          1
+        ],
+        "denominator": 2,
+        "matrix": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "row_against_columns": [
+          1,
+          1
+        ],
+        "row_mix": [
+          1,
+          1
+        ],
+        "value_numerator": 1
+      }
+    }
+  },
+  "address": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+  "source": {
+    "address": "0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36",
+    "source_match": true,
+    "sha256": "daa588b6be55e5216219b3686aed0b100ba5d5122200d1c9b9e07796ff5a9197"
+  },
+  "verified": true
+}

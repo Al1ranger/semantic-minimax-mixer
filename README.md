@@ -19,4 +19,6 @@ npm ci --ignore-scripts
 
 [GenLayer Equivalence Principle](https://docs.genlayer.com/developers/intelligent-contracts/equivalence-principle). Native transport and Windows testing helpers are adapted from [SemanticEffectCommutator](https://github.com/Al1ranger/semantic-effect-commutator) under the included MIT notices.
 
-StudioNet deployment and receipts are pending.
+StudioNet contract `0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36`. The normalized deployed source SHA-256 is `daa588b6be55e5216219b3686aed0b100ba5d5122200d1c9b9e07796ff5a9197`. [Explorer contract and source](https://explorer-studio.genlayer.com/address/0x96b0FfE03611F43FA1fAA8e5CDeE0c8733848a36).
+
+The balanced fixture produced a value of 1/2 with equal mixing. Leaving one matchup unspecified widened the interval to 0–1/2 and changed the decision to UNRESOLVED. [Live receipts](LIVE_PROOFS.md) · [Full reports and readbacks](PROOFS.json) · [Submission text](SUBMISSION.md).
